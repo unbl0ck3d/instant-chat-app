@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💬 Instant Chat App</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            padding: 0.5rem 1rem;
+        }
+        li:nth-child(odd){
+            background-color: grey;
+        }
+        form{
+            background-color: black;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            height: 2rem;
+        }
+        input{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="message"></ul>
+    <form action="" id="form">
+        <input id="inputMessage">
+        <button>Send</button>
+    </form>
+</body>
+</html>
