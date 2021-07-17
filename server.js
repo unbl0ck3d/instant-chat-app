@@ -5,9 +5,9 @@ const http = require("http");
 const server = http.createServer(app);
 
 app.get("/", function(req, res){
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/");
 })
 
 app.listen(3000, function(){
     console.log("listening to localhost 3000");
-}) 
+})
