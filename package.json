@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/guptasajal411/instant-chat-app/issues"
   },
-  "homepage": "https://github.com/guptasajal411/instant-chat-app#readme"
+  "homepage": "https://github.com/guptasajal411/instant-chat-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
