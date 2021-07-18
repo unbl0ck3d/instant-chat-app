@@ -20,6 +20,9 @@ io.on('connection', (socket) => {
         console.log("message received.");
         console.log("message: " + msg);
     })
+    socket.on("message sender", (nick) => {
+        console.log("nick: " + nick);
+    })
 });
 
 io.on('connection', (socket) => {
