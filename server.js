@@ -16,10 +16,16 @@ io.on('connection', (socket) => {
     socket.on("disconnect", () => {
         console.log("A user disconnected");
     })
-    socket.on("chat message", (msg)=>{
+    socket.on("chat message", (msg) => {
         console.log("message received.");
         console.log("message: " + msg);
     })
+});
+
+io.on('connection', (socket) => {
+    socket.on('chat message', (msg) => {
+        io.emit('chat message', msg);
+    });
 });
 
 server.listen(3000, () => {
