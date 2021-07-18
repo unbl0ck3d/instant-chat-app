@@ -64,23 +64,25 @@
 <body>
     <ul id="messages"></ul>
     <form id="form" action="">
-        <input id="input" autocomplete="off" /><button>Send</button>
+        <input type="text" id="nick">
+        <input id="input" autocomplete="off" />
+        <button>Send</button>
     </form>
     <script src="socket.io.js"></script>
     <script>
         var socket = io();
-
         var form = document.getElementById('form');
         var input = document.getElementById('input');
+        var nick = document.getElementById('nick');
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             if (input.value) {
                 socket.emit('chat message', input.value);
+                socket.emit('message sender', nick.value);
                 input.value = '';
             }
         });
-
         socket.on('chat message', function (msg) {
             var item = document.createElement('li');
             item.textContent = msg;
