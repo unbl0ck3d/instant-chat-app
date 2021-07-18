@@ -29,6 +29,9 @@ io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
         io.emit('chat message', msg);
     });
+    socket.on('message sender', (nick) => {
+        io.emit('message sender', nick);
+    });
 });
 
 server.listen(3000, () => {
