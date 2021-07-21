@@ -13,98 +13,131 @@
             background-color: #0d1418;
         }
 
+        .messageContainer{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message{
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            width: auto;
+            color: #d4d5d7;
+            margin-top: 2rem;
+        }
+        
+        .receivedMessage{
+            float: left;
+            background-color:#262d31;
+            max-width: 50%;
+        }
+        
+        .sentMessage{
+            max-width: 40%;
+            float: right;
+            background-color: #056162;
+            margin-right: 0;
+            align-self: flex-end;
+        }
+        
+        .botMessage{
+            max-width: 75%;
+            align-self: center;
+            background-color: #223138;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.75rem;
+        }
+        
         #form {
-            background: rgba(0, 0, 0, 0.15);
+            background-color: #1e2428;
             padding: 0.25rem;
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             display: flex;
-            height: 3rem;
+            flex-direction: row;
+            height: 4rem;
             box-sizing: border-box;
-            backdrop-filter: blur(10px);
+            width: 100%;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .messageBox{
+            width: 90%;
+            color: #d4d5d7;
+            border: 0;
+            border-radius: 1000px;
+            background-color: #33383b;
+            max-width:70%;
+            height: 75%;
+            padding-left: 1.5%;
+            padding-right: 1.5%;
+        }
+        
+        .messageBox:focus{
+            outline: 0;
+            border: 1px #056162 solid;
+        }
+        
+        .sendButton{
+            color: #d4d5d7;
+            height: 75%;
+            width: 10%;
+            border: 0;
+            border-radius: 4px;
+            max-width: 10%;
+            background-color: transparent;
         }
 
-        #input {
-            border: none;
-            padding: 0 1rem;
-            flex-grow: 1;
-            border-radius: 2rem;
-            margin: 0.25rem;
-        }
 
-        #input:focus {
-            outline: none;
-        }
-
-        #form>button {
-            background: #333;
-            border: none;
-            padding: 0 1rem;
-            margin: 0.25rem;
-            border-radius: 3px;
-            outline: none;
-            color: #fff;
-        }
-
-        #messages {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        li {
-            padding: 0.5rem 1rem;
-            /* width: 100%; */
-            word-wrap: break-word;
-            margin-top: 2.5rem;
-            background-color: #262d31;
-            color: white;
-            border-radius: 5px;
-            width: 30%;
-        }
     </style>
 </head>
 
 <body>
-    <ul id="messages" class="ms-4 mt-3"></ul>
+    <div class="messageContainer container">
+        <div class="message receivedMessage ">abracadabra Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nesciunt iusto incidunt, repellendus facilis adipisci repudiandae numquam odio aliquam rerum impedit architecto vero dolor obcaecati illum minima odit fugiat consectetur placeat optio explicabo tempore doloribus. Voluptas nobis atque qui omnis possimus maxime provident placeat! Saepe iure accusantium possimus adipisci vero.</div>
+        <div class="message sentMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maxime at nemo sed molestias corrupti! Ex deserunt, voluptatum consectetur blanditiis, voluptatem eveniet autem dolore, eum dolor unde laboriosam dignissimos! Voluptates ad eius nisi doloribus qui quae accusantium quidem quo laudantium hic odio laborum iste sint cumque soluta, beatae aut modi.</div>
+        <div class="message botMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae nisi consequuntur dolorem maxime labore ullam eaque sequi autem dicta repellat impedit architecto qui, totam molestiae, reprehenderit doloribus assumenda? At, quo consectetur. Repellat, assumenda, repellendus delectus perspiciatis doloribus voluptas dolores inventore libero earum eius, iure quasi deleniti suscipit! Voluptatum, consequatur.</div>
+        <div class="message receivedMessage ">abracadabra Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nesciunt iusto incidunt, repellendus facilis adipisci repudiandae numquam odio aliquam rerum impedit architecto vero dolor obcaecati illum minima odit fugiat consectetur placeat optio explicabo tempore doloribus. Voluptas nobis atque qui omnis possimus maxime provident placeat! Saepe iure accusantium possimus adipisci vero.</div>
+        <div class="message sentMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maxime at nemo sed molestias corrupti! Ex deserunt, voluptatum consectetur blanditiis, voluptatem eveniet autem dolore, eum dolor unde laboriosam dignissimos! Voluptates ad eius nisi doloribus qui quae accusantium quidem quo laudantium hic odio laborum iste sint cumque soluta, beatae aut modi.</div>
+        <div class="message botMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae nisi consequuntur dolorem maxime labore ullam eaque sequi autem dicta repellat impedit architecto qui, totam molestiae, reprehenderit doloribus assumenda? At, quo consectetur. Repellat, assumenda, repellendus delectus perspiciatis doloribus voluptas dolores inventore libero earum eius, iure quasi deleniti suscipit! Voluptatum, consequatur.</div>
+        <div class="message receivedMessage ">abracadabra Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nesciunt iusto incidunt, repellendus facilis adipisci repudiandae numquam odio aliquam rerum impedit architecto vero dolor obcaecati illum minima odit fugiat consectetur placeat optio explicabo tempore doloribus. Voluptas nobis atque qui omnis possimus maxime provident placeat! Saepe iure accusantium possimus adipisci vero.</div>
+        <div class="message sentMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maxime at nemo sed molestias corrupti! Ex deserunt, voluptatum consectetur blanditiis, voluptatem eveniet autem dolore, eum dolor unde laboriosam dignissimos! Voluptates ad eius nisi doloribus qui quae accusantium quidem quo laudantium hic odio laborum iste sint cumque soluta, beatae aut modi.</div>
+        <div class="message botMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae nisi consequuntur dolorem maxime labore ullam eaque sequi autem dicta repellat impedit architecto qui, totam molestiae, reprehenderit doloribus assumenda? At, quo consectetur. Repellat, assumenda, repellendus delectus perspiciatis doloribus voluptas dolores inventore libero earum eius, iure quasi deleniti suscipit! Voluptatum, consequatur.</div>
+        <div class="message receivedMessage ">abracadabra Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nesciunt iusto incidunt, repellendus facilis adipisci repudiandae numquam odio aliquam rerum impedit architecto vero dolor obcaecati illum minima odit fugiat consectetur placeat optio explicabo tempore doloribus. Voluptas nobis atque qui omnis possimus maxime provident placeat! Saepe iure accusantium possimus adipisci vero.</div>
+        <div class="message sentMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maxime at nemo sed molestias corrupti! Ex deserunt, voluptatum consectetur blanditiis, voluptatem eveniet autem dolore, eum dolor unde laboriosam dignissimos! Voluptates ad eius nisi doloribus qui quae accusantium quidem quo laudantium hic odio laborum iste sint cumque soluta, beatae aut modi.</div>
+        <div class="message botMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae nisi consequuntur dolorem maxime labore ullam eaque sequi autem dicta repellat impedit architecto qui, totam molestiae, reprehenderit doloribus assumenda? At, quo consectetur. Repellat, assumenda, repellendus delectus perspiciatis doloribus voluptas dolores inventore libero earum eius, iure quasi deleniti suscipit! Voluptatum, consequatur.</div>
+    </div>
     <form id="form" action="">
-        <input type="text" id="nick">
-        <input id="input" autocomplete="off" />
-        <button>Send</button>
+        <input id="input" autocomplete="off" class="messageBox" placeholder="Type a message...">
+        <button class="sendButton">Send</button>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script>
+        // var nick = prompt("Enter your nickname");
         var socket = io();
         var form = document.getElementById('form');
         var input = document.getElementById('input');
-        var nick = document.getElementById('nick');
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+        socket.on("welcomeMessage", function(message){
+            console.log(message);
+        })
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log(event);
             if (input.value) {
-                socket.emit('chat message', input.value);
-                socket.emit('message sender', nick.value);
                 input.value = '';
             }
         });
-        socket.on('chat message', function (msg) {
-            var item = document.createElement('li');
-            item.textContent = msg;
-            messages.appendChild(item);
-            window.scrollTo(0, document.body.scrollHeight);
-        });
-        socket.on('message sender', function (nick) {
-            var item1 = document.createElement('li');
-            item1.textContent = "From: " + nick;
-            messages.appendChild(item1);
-            window.scrollTo(0, document.body.scrollHeight);
-        });
-        </script>
+    </script>
 </body>
 
 </html>
