@@ -18,8 +18,8 @@ Built with Node.js and Express.js. This app uses sockets to send and recieve mes
 5. Now enter your Nickname in the box and send messages to each other. You can see that your friend's message will be updated in your browser. 
 
 # Screenshots 📸
-![browser](https://user-images.githubusercontent.com/70312106/126434514-9651d85a-a5ad-4434-9268-b8dbc6608631.PNG)
-![android](https://user-images.githubusercontent.com/70312106/126434525-f5ed1b8f-34be-4a45-a192-4563225956bc.jpg)
+![browser](https://user-images.githubusercontent.com/70312106/126459075-57c9e875-4ea2-4dab-91b4-7c4d3423dd71.PNG)
+![android](https://user-images.githubusercontent.com/70312106/126459086-78081431-f35f-4896-8e12-527290ee8d55.jpg)
 ![terminal](https://user-images.githubusercontent.com/70312106/126066624-a8445b60-275d-4825-85ce-c24441bb675a.PNG)
 ![youtube](https://user-images.githubusercontent.com/70312106/126066625-18754988-6c9f-4906-b5ab-d2ba1ea59898.PNG)
 ![code](https://user-images.githubusercontent.com/70312106/126066629-ba41d56f-3cdf-4575-ba2e-0fe3d213ede2.PNG)
