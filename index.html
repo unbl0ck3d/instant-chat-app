@@ -28,16 +28,15 @@
         }
 
         .receivedMessage {
-            float: left;
             background-color: #262d31;
             max-width: 50%;
+            width: auto;
+            align-self: flex-start;
         }
 
         .sentMessage {
             max-width: 40%;
-            float: right;
             background-color: #056162;
-            margin-right: 0;
             align-self: flex-end;
         }
 
@@ -97,8 +96,7 @@
 
 <body>
     <!-- message, receivedMessage, sentMessage, botMessage -->
-    <div class="messageContainer container">
-    </div>
+    <div class="messageContainer container"></div>
     <form id="form" action="">
         <input id="input" autocomplete="off" class="messageBox" placeholder="Type a message...">
         <button class="sendButton">Send</button>
