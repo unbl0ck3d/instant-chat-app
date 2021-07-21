@@ -34,6 +34,14 @@
             font-size: 0.8rem;
             width: auto;
         }
+        
+        .time{
+            font-family: monospace;
+            font-size: 0.8rem;
+            float: right;
+            position: relative;
+            bottom: -7px;
+        }
 
         .receivedMessage {
             background-color: #262d31;
@@ -161,7 +169,6 @@
         //emitting new messages if submitted
         form.addEventListener('submit', function (event) {
             event.preventDefault();
-            console.log(event);
             if (input.value) {
                 var message = input.value;
                 //emitting message and nick to the server
@@ -175,6 +182,14 @@
                 div.innerHTML = message + "<br><span class = 'metaData'>" + nick.value + "</span>";
                 document.querySelector(".messageContainer").appendChild(div);
                 div.scrollIntoView();
+                //time manipulation
+                var d = new Date();
+                if(d.getHours() > 12){
+                    div.innerHTML = div.innerHTML + "<div class='time'>" + (d.getHours()-12) + ":" + d.getMinutes() + " PM" + "</div>";
+                }
+                else{
+                    div.innerHTML = div.innerHTML + "<div class='time'>" + d.getHours() + ":" + d.getMinutes() + " AM" + "</div>";
+                }
             }
             document.querySelector(".nickBox").setAttribute("disabled", "disabled");
             console.log(nick.value);
