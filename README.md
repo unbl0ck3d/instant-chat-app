@@ -15,14 +15,22 @@ Built with Node.js and Express.js. This app uses sockets to send and recieve mes
 
 4. Go to `localhost:3000` on your browser. Ask your friends to also do the same. If you dont have friends, you can also open the same link in multiple tabs. 
 
-5. Now enter your Nickname in the box and send messages to each other. You can see that your friend's message will be updated in your browser. 
+5. Now enter your Nickname in the box and send messages to each other. You can see that your friend's message will be updated in your browser with relevant metadata.
 
 # Screenshots 📸
-![browser](https://user-images.githubusercontent.com/70312106/126434514-9651d85a-a5ad-4434-9268-b8dbc6608631.PNG)
-![android](https://user-images.githubusercontent.com/70312106/126434525-f5ed1b8f-34be-4a45-a192-4563225956bc.jpg)
-![terminal](https://user-images.githubusercontent.com/70312106/126066624-a8445b60-275d-4825-85ce-c24441bb675a.PNG)
-![youtube](https://user-images.githubusercontent.com/70312106/126066625-18754988-6c9f-4906-b5ab-d2ba1ea59898.PNG)
-![code](https://user-images.githubusercontent.com/70312106/126066629-ba41d56f-3cdf-4575-ba2e-0fe3d213ede2.PNG)
+![browser](https://user-images.githubusercontent.com/70312106/126495513-a50c3378-5546-45ad-89bb-b39493f9d961.PNG)
+![android](https://user-images.githubusercontent.com/70312106/126497036-a74bd9f3-21bd-4065-bd88-78c9d8018b84.jpg)
+![terminal](https://user-images.githubusercontent.com/70312106/126497868-dd4f1a6d-5fd9-4540-81ee-31da421728e0.PNG)
+![youtube](https://user-images.githubusercontent.com/70312106/126497882-8489516f-4c73-4914-a0fb-c737892b02f5.PNG)
+![code](https://user-images.githubusercontent.com/70312106/126497890-2335c3ab-86c1-4049-a93e-dc2bd3b2c136.PNG)
+
+# Demo 👨‍💻
+
+
+https://user-images.githubusercontent.com/70312106/126496317-ade805f3-41ae-4362-b3a5-24422d272ffd.mp4
+
+
+Find the full demo here: https://youtu.be/vxyrRrdmYCg
 
 # Inspiration 💡
 I wanted to create a privacy centric chat application. As you already know, our chats on most of the applications use our chats to show us personalized ads. So I wanted to create something which doesn't store any data from my users. This application's data should be deleted as the members leave the chat.
