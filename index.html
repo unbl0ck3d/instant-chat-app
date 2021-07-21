@@ -35,14 +35,15 @@
             width: auto;
             color: #f1f1f2a1;
         }
-        
-        .time{
+
+        .time {
             font-family: monospace;
             font-size: 0.8rem;
             float: right;
             position: relative;
             bottom: -7px;
             color: #f1f1f2a1;
+            padding-left: 2rem;
         }
 
         .receivedMessage {
@@ -155,7 +156,7 @@
         var form = document.getElementById('form');
         var input = document.getElementById('input');
         var nick = document.querySelector(".nickBox");
-
+        
         // listening for bot messages
         socket.on("botMessage", function (message) {
             console.log(message);
@@ -186,11 +187,21 @@
                 div.scrollIntoView();
                 //time manipulation
                 var d = new Date();
-                if(d.getHours() > 12){
-                    div.innerHTML = div.innerHTML + "<div class='time'>" + (d.getHours()-12) + ":" + d.getMinutes() + " PM" + "</div>";
+                if (d.getHours() > 12) {
+                    if (d.getMinutes() < 10){
+                        div.innerHTML = div.innerHTML + "<div class='time'>" + (d.getHours() - 12) + ":0" + d.getMinutes() + " PM" + "</div>";
+                    }
+                    else {
+                        div.innerHTML = div.innerHTML + "<div class='time'>" + (d.getHours() - 12) + ":" + d.getMinutes() + " PM" + "</div>";
+                    }
                 }
-                else{
-                    div.innerHTML = div.innerHTML + "<div class='time'>" + d.getHours() + ":" + d.getMinutes() + " AM" + "</div>";
+                else {
+                    if (d.getMinutes() < 10){
+                        div.innerHTML = div.innerHTML + "<div class='time'>" + d.getHours() + ":0" + d.getMinutes() + " AM" + "</div>";
+                    }
+                    else{
+                        div.innerHTML = div.innerHTML + "<div class='time'>" + d.getHours() + ":" + d.getMinutes() + " AM" + "</div>";
+                    }
                 }
             }
             document.querySelector(".nickBox").setAttribute("disabled", "disabled");
@@ -215,6 +226,24 @@
             var length = document.querySelectorAll(".receivedMessage").length;
             var lastChild = document.querySelectorAll(".receivedMessage")[length - 1];
             lastChild.innerHTML = lastChild.innerHTML + "<br><span class = 'metaData'>" + message + "</span>";
+            //time manipulation
+            var d = new Date();
+            if (d.getHours() > 12) {
+                if (d.getMinutes() < 10){
+                    lastChild.innerHTML = lastChild.innerHTML + "<div class='time'>" + (d.getHours() - 12) + ":0" + d.getMinutes() + " PM" + "</div>";
+                }
+                else {
+                    lastChild.innerHTML = lastChild.innerHTML + "<div class='time'>" + (d.getHours() - 12) + ":" + d.getMinutes() + " PM" + "</div>";
+                }
+            }
+            else {
+                if (d.getMinutes() < 10){
+                    lastChild.innerHTML = lastChild.innerHTML + "<div class='time'>" + d.getHours() + ":0" + d.getMinutes() + " AM" + "</div>";
+                }
+                else{
+                    lastChild.innerHTML = lastChild.innerHTML + "<div class='time'>" + d.getHours() + ":" + d.getMinutes() + " AM" + "</div>";
+                }
+            }
         })
     </script>
 </body>
