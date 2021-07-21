@@ -15,7 +15,27 @@ app.get('/', (req, res) => {
 
 io.on("connection", function(socket) {
     console.log("new connection");
-    socket.emit("welcomeMessage", "Welcome to Chatbud!")
+
+    // emit welcome message to single user when connected
+    // socket.emit("welcomeMessage", "Welcome to Chatbud!")
+
+    // emit to everyone except the client thats connected
+    socket.broadcast.emit("welcomeMessage", "A new user connected");
+
+    // emitting to all the clients
+    // io.emit("welcomeMessage", "nise")
+
+    // catching a reveived message from client
+    socket.on("sentMessage", function(message){
+        // console.log(message);
+
+        // sending message to other clients as their received message
+        socket.broadcast.emit("receivedMessage", message);
+    })
+
+    socket.on("disconnect", function(){
+        console.log("A user disconnected");
+    })
 })
 
 server.listen(3000, () => {

@@ -13,42 +13,42 @@
             background-color: #0d1418;
         }
 
-        .messageContainer{
+        .messageContainer {
             width: 75%;
             display: flex;
             flex-direction: column;
         }
 
-        .message{
+        .message {
             border-radius: 4px;
             padding: 0.5rem 1rem;
             width: auto;
             color: #d4d5d7;
             margin-top: 2rem;
         }
-        
-        .receivedMessage{
+
+        .receivedMessage {
             float: left;
-            background-color:#262d31;
+            background-color: #262d31;
             max-width: 50%;
         }
-        
-        .sentMessage{
+
+        .sentMessage {
             max-width: 40%;
             float: right;
             background-color: #056162;
             margin-right: 0;
             align-self: flex-end;
         }
-        
-        .botMessage{
+
+        .botMessage {
             max-width: 75%;
             align-self: center;
             background-color: #223138;
             padding: 0.2rem 0.5rem;
             font-size: 0.75rem;
         }
-        
+
         #form {
             background-color: #1e2428;
             padding: 0.25rem;
@@ -65,25 +65,25 @@
             justify-content: center;
             align-items: center;
         }
-        
-        .messageBox{
+
+        .messageBox {
             width: 90%;
             color: #d4d5d7;
             border: 0;
             border-radius: 1000px;
             background-color: #33383b;
-            max-width:70%;
+            max-width: 70%;
             height: 75%;
             padding-left: 1.5%;
             padding-right: 1.5%;
         }
-        
-        .messageBox:focus{
+
+        .messageBox:focus {
             outline: 0;
             border: 1px #056162 solid;
         }
-        
-        .sendButton{
+
+        .sendButton {
             color: #d4d5d7;
             height: 75%;
             width: 10%;
@@ -92,25 +92,12 @@
             max-width: 10%;
             background-color: transparent;
         }
-
-
     </style>
 </head>
 
 <body>
+    <!-- message, receivedMessage, sentMessage, botMessage -->
     <div class="messageContainer container">
-        <div class="message receivedMessage ">abracadabra Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nesciunt iusto incidunt, repellendus facilis adipisci repudiandae numquam odio aliquam rerum impedit architecto vero dolor obcaecati illum minima odit fugiat consectetur placeat optio explicabo tempore doloribus. Voluptas nobis atque qui omnis possimus maxime provident placeat! Saepe iure accusantium possimus adipisci vero.</div>
-        <div class="message sentMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maxime at nemo sed molestias corrupti! Ex deserunt, voluptatum consectetur blanditiis, voluptatem eveniet autem dolore, eum dolor unde laboriosam dignissimos! Voluptates ad eius nisi doloribus qui quae accusantium quidem quo laudantium hic odio laborum iste sint cumque soluta, beatae aut modi.</div>
-        <div class="message botMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae nisi consequuntur dolorem maxime labore ullam eaque sequi autem dicta repellat impedit architecto qui, totam molestiae, reprehenderit doloribus assumenda? At, quo consectetur. Repellat, assumenda, repellendus delectus perspiciatis doloribus voluptas dolores inventore libero earum eius, iure quasi deleniti suscipit! Voluptatum, consequatur.</div>
-        <div class="message receivedMessage ">abracadabra Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nesciunt iusto incidunt, repellendus facilis adipisci repudiandae numquam odio aliquam rerum impedit architecto vero dolor obcaecati illum minima odit fugiat consectetur placeat optio explicabo tempore doloribus. Voluptas nobis atque qui omnis possimus maxime provident placeat! Saepe iure accusantium possimus adipisci vero.</div>
-        <div class="message sentMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maxime at nemo sed molestias corrupti! Ex deserunt, voluptatum consectetur blanditiis, voluptatem eveniet autem dolore, eum dolor unde laboriosam dignissimos! Voluptates ad eius nisi doloribus qui quae accusantium quidem quo laudantium hic odio laborum iste sint cumque soluta, beatae aut modi.</div>
-        <div class="message botMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae nisi consequuntur dolorem maxime labore ullam eaque sequi autem dicta repellat impedit architecto qui, totam molestiae, reprehenderit doloribus assumenda? At, quo consectetur. Repellat, assumenda, repellendus delectus perspiciatis doloribus voluptas dolores inventore libero earum eius, iure quasi deleniti suscipit! Voluptatum, consequatur.</div>
-        <div class="message receivedMessage ">abracadabra Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nesciunt iusto incidunt, repellendus facilis adipisci repudiandae numquam odio aliquam rerum impedit architecto vero dolor obcaecati illum minima odit fugiat consectetur placeat optio explicabo tempore doloribus. Voluptas nobis atque qui omnis possimus maxime provident placeat! Saepe iure accusantium possimus adipisci vero.</div>
-        <div class="message sentMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maxime at nemo sed molestias corrupti! Ex deserunt, voluptatum consectetur blanditiis, voluptatem eveniet autem dolore, eum dolor unde laboriosam dignissimos! Voluptates ad eius nisi doloribus qui quae accusantium quidem quo laudantium hic odio laborum iste sint cumque soluta, beatae aut modi.</div>
-        <div class="message botMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae nisi consequuntur dolorem maxime labore ullam eaque sequi autem dicta repellat impedit architecto qui, totam molestiae, reprehenderit doloribus assumenda? At, quo consectetur. Repellat, assumenda, repellendus delectus perspiciatis doloribus voluptas dolores inventore libero earum eius, iure quasi deleniti suscipit! Voluptatum, consequatur.</div>
-        <div class="message receivedMessage ">abracadabra Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis nesciunt iusto incidunt, repellendus facilis adipisci repudiandae numquam odio aliquam rerum impedit architecto vero dolor obcaecati illum minima odit fugiat consectetur placeat optio explicabo tempore doloribus. Voluptas nobis atque qui omnis possimus maxime provident placeat! Saepe iure accusantium possimus adipisci vero.</div>
-        <div class="message sentMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maxime at nemo sed molestias corrupti! Ex deserunt, voluptatum consectetur blanditiis, voluptatem eveniet autem dolore, eum dolor unde laboriosam dignissimos! Voluptates ad eius nisi doloribus qui quae accusantium quidem quo laudantium hic odio laborum iste sint cumque soluta, beatae aut modi.</div>
-        <div class="message botMessage">abracadabra Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae nisi consequuntur dolorem maxime labore ullam eaque sequi autem dicta repellat impedit architecto qui, totam molestiae, reprehenderit doloribus assumenda? At, quo consectetur. Repellat, assumenda, repellendus delectus perspiciatis doloribus voluptas dolores inventore libero earum eius, iure quasi deleniti suscipit! Voluptatum, consequatur.</div>
     </div>
     <form id="form" action="">
         <input id="input" autocomplete="off" class="messageBox" placeholder="Type a message...">
@@ -126,17 +113,38 @@
         var form = document.getElementById('form');
         var input = document.getElementById('input');
 
-        socket.on("welcomeMessage", function(message){
+        socket.on("welcomeMessage", function (message) {
             console.log(message);
         })
 
+        //emitting new messages if submitted
         form.addEventListener('submit', function (event) {
             event.preventDefault();
             console.log(event);
             if (input.value) {
+                var message = input.value;
+                //emitting message to the server
+                socket.emit("sentMessage", message);
                 input.value = '';
+                //dom manipulation for sent messages
+                const div = document.createElement("div");
+                div.classList.add("message");
+                div.classList.add("sentMessage");
+                div.innerHTML = message;
+                document.querySelector(".messageContainer").appendChild(div);
             }
         });
+
+        //listening for incoming messages
+        socket.on("receivedMessage", function (message) {
+            console.log(message);
+            //dom manipulation for received messages
+            const div = document.createElement("div");
+            div.classList.add("message");
+            div.classList.add("receivedMessage");
+            div.innerHTML = message;
+            document.querySelector(".messageContainer").appendChild(div);
+        })
     </script>
 </body>
 
