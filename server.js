@@ -17,7 +17,7 @@ io.on("connection", function(socket) {
     console.log("new connection");
 
     // emit welcome message to single user when connected
-    // socket.emit("welcomeMessage", "Welcome to Chatbud!")
+    socket.emit("botMessage", "Welcome to Chatbud! You are now connected to the group chat :D");
 
     // emit to everyone except the client thats connected
     socket.broadcast.emit("welcomeMessage", "A new user connected");
