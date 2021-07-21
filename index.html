@@ -10,7 +10,7 @@
     <style>
         body {
             margin: 0;
-            padding-bottom: 3rem;
+            padding-bottom: 5rem;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #0d1418;
         }
@@ -131,6 +131,7 @@
             div.classList.add("botMessage");
             div.innerHTML = message;
             document.querySelector(".messageContainer").appendChild(div);
+            div.scrollIntoView();
         })
 
         //emitting new messages if submitted
@@ -148,6 +149,7 @@
                 div.classList.add("sentMessage");
                 div.innerHTML = message;
                 document.querySelector(".messageContainer").appendChild(div);
+                div.scrollIntoView();
             }
         });
 
@@ -160,6 +162,7 @@
             div.classList.add("receivedMessage");
             div.innerHTML = message;
             document.querySelector(".messageContainer").appendChild(div);
+            div.scrollIntoView();
         })
     </script>
 </body>
