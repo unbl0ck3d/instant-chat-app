@@ -2,6 +2,9 @@
 This is a chat application which can be used in any browser. It can have unlimited numbers of group members. Use it to send messages to your peers!
 Built with Node.js and Express.js. This app uses sockets to send and recieve messages to and from the server.
 
+I am pushing some major updates for new features and UI on this repo, so the app may not be functional.
+For functional version of the app, see 19th commit.
+
 # How to use this? 🤔
 
 1. Clone this repository in your local environment by the following command:<br>
