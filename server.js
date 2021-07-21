@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
+    socket.emit('chat message', "Welcome to Chatbud");
+
     console.log('a user connected');
     socket.on("disconnect", () => {
         console.log("A user disconnected");
@@ -27,7 +29,7 @@ io.on('connection', (socket) => {
 
 io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
-        io.emit('chat message', msg);
+        socket.emit(msg);
     });
     socket.on('message sender', (nick) => {
         io.emit('message sender', nick);
