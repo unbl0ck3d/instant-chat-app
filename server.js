@@ -32,6 +32,13 @@ io.on("connection", function(socket) {
         socket.broadcast.emit("receivedMessage", message);
     })
 
+    // catching the nickname from client
+    socket.on("nick", function(message){
+        
+        // sending nick to other clients
+        socket.broadcast.emit("nick", message);
+    })
+
     socket.on("disconnect", function(){
         console.log("A user disconnected");
         socket.broadcast.emit("botMessage", "A user disconnected from the chat");
