@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 io.on("connection", function(socket) {
-    console.log("new connection");
+    console.log("A new user connected");
 
     // emit welcome message to single user when connected
     socket.emit("botMessage", "Welcome to Chatbud! You are now connected to the group chat :D");
@@ -34,6 +34,7 @@ io.on("connection", function(socket) {
 
     socket.on("disconnect", function(){
         console.log("A user disconnected");
+        socket.broadcast.emit("botMessage", "A user disconnected from the chat");
     })
 })
 
