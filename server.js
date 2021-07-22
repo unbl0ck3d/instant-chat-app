@@ -37,6 +37,6 @@ io.on("connection", function(socket) {
         socket.broadcast.emit("botMessage", "A user disconnected from the chat");
     })
 })
-server.listen(3000, () => {
-    console.log('listening to port 3000...');
+server.listen(process.env.PORT || 3000, () => {
+    console.log('listening to port...');
 });

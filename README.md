@@ -2,13 +2,7 @@
 This is a chat application which can be used in any browser. It can have unlimited numbers of group members. Use it to send messages to your peers!
 Built with Node.js and Express.js. This app uses sockets to send and recieve messages to and from the server.
 
-Now you can try out this app on: **https://try-chatbud.herokuapp.com/**<br>
-Ask your friends to open this link and chat with you! You can also open the link in multiple tabs to try it out.
-
 # How to use this? 🤔
-
-You can go directly to **https://try-chatbud.herokuapp.com/** to try this app out.<br>
-If you want to try this app on your local system, follow these steps:
 
 1. Clone this repository in your local environment by the following command:<br>
 ```git clone https://github.com/guptasajal411/instant-chat-app.git```
