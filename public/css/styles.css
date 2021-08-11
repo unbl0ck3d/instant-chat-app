@@ -122,3 +122,23 @@ body {
     justify-content: center;
     padding-left: 1rem;
 }
+
+@media only screen and (max-width: 576px) {
+    .receivedMessage {
+        max-width: 85%;
+    }
+    
+    .sentMessage {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .receivedMessage {
+        max-width: 95%;
+    }
+    
+    .sentMessage {
+        max-width: 90%;
+    }
+}
