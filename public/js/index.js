@@ -68,26 +68,60 @@ socket.on("receivedMessage", function (message) {
 
 // listening for incoming nicks
 socket.on("nick", function (message) {
-    console.log(message);
-    var length = document.querySelectorAll(".receivedMessage").length;
-    var lastChild = document.querySelectorAll(".receivedMessage")[length - 1];
-    lastChild.innerHTML = lastChild.innerHTML + "<br><span class = 'metaData'>" + message + "</span>";
-    //time manipulation
-    var d = new Date();
-    if (d.getHours() > 12) {
-        if (d.getMinutes() < 10) {
-            lastChild.innerHTML = lastChild.innerHTML + "<div class='time'>" + (d.getHours() - 12) + ":0" + d.getMinutes() + " PM" + "</div>";
-        }
-        else {
-            lastChild.innerHTML = lastChild.innerHTML + "<div class='time'>" + (d.getHours() - 12) + ":" + d.getMinutes() + " PM" + "</div>";
-        }
+  console.log(message);
+  var length = document.querySelectorAll(".receivedMessage").length;
+  var lastChild = document.querySelectorAll(".receivedMessage")[length - 1];
+  lastChild.innerHTML =
+    lastChild.innerHTML + "<br><span class = 'metaData'>" + message + "</span>";
+  //time manipulation
+  var d = new Date();
+  if (d.getHours() > 12) {
+    if (d.getMinutes() < 10) {
+      lastChild.innerHTML =
+        lastChild.innerHTML +
+        "<div class='time'>" +
+        (d.getHours() - 12) +
+        ":0" +
+        d.getMinutes() +
+        " PM" +
+        "</div>";
+    } else {
+      lastChild.innerHTML =
+        lastChild.innerHTML +
+        "<div class='time'>" +
+        (d.getHours() - 12) +
+        ":" +
+        d.getMinutes() +
+        " PM" +
+        "</div>";
     }
-    else {
-        if (d.getMinutes() < 10) {
-            lastChild.innerHTML = lastChild.innerHTML + "<div class='time'>" + d.getHours() + ":0" + d.getMinutes() + " AM" + "</div>";
-        }
-        else {
-            lastChild.innerHTML = lastChild.innerHTML + "<div class='time'>" + d.getHours() + ":" + d.getMinutes() + " AM" + "</div>";
-        }
+  } else {
+    if (d.getMinutes() < 10) {
+      lastChild.innerHTML =
+        lastChild.innerHTML +
+        "<div class='time'>" +
+        d.getHours() +
+        ":0" +
+        d.getMinutes() +
+        " AM" +
+        "</div>";
+    } else {
+      lastChild.innerHTML =
+        lastChild.innerHTML +
+        "<div class='time'>" +
+        d.getHours() +
+        ":" +
+        d.getMinutes() +
+        " AM" +
+        "</div>";
     }
+  }
 })
+
+
+socket.on("users", function (data) {
+    var item = document.getElementsByClassName("activeUsers");
+    var oldUsersValue = item[0].childNodes[0];
+    let latestUsersValue = data.users;
+    oldUsersValue.nodeValue = latestUsersValue;
+  });
