@@ -1,4 +1,4 @@
-var socket = io();
+ var socket = io();
 var form = document.getElementById('form');
 var input = document.getElementById('input');
 var nick = document.querySelector(".nickBox");
@@ -91,3 +91,11 @@ socket.on("nick", function (message) {
         }
     }
 })
+
+
+socket.on("users", function (data) {
+    var item = document.getElementsByClassName("activeUsers");
+    var oldUsersValue = item[0].childNodes[0];
+    let latestUsersValue = data.users;
+    oldUsersValue.nodeValue = latestUsersValue;
+  });
