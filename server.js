@@ -25,18 +25,18 @@ io.on("connection", function(socket) {
   // emitting to all the clients
   // io.emit("welcomeMessage", "nise")
   // catching a received message from client
-  socket.on("sentMessage", function (message) {
+  socket.on("sentMessage", function(message) {
     console.log("Message: " + message);
     // sending message to other clients as their received message
     socket.broadcast.emit("receivedMessage", message);
   });
   // catching the nickname from client
-  socket.on("nick", function (message) {
+  socket.on("nick", function(message) {
     console.log("From: " + message);
     // sending nick to other clients
     socket.broadcast.emit("nick", message);
   });
-  socket.on("disconnect", function () {
+  socket.on("disconnect", function() {
     users = users - 1; //decrement the counter whenever a user disconnects
     io.sockets.emit("users", { users: users }); //emits the number of active users at the given moment
     console.log("A user disconnected");
