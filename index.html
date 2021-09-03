@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <head>
     <title>ChatBud - Chat made easy! 💬</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,16 +18,24 @@
 <body>
     <!-- message, receivedMessage, sentMessage, botMessage -->
     <div class="messageContainer container">
-        <p  style="color: white;">Active users:<span id="activeUsers" class="activeUsers">0</span></p>
+        <p style="color: white;">Active users:<span id="activeUsers" class="activeUsers">0</span></p>
     </div>
     <form id="form" action="">
         <input class="nickBox" placeholder="Nickname">
         <input id="input" autocomplete="off" class="messageBox" placeholder="Type a message...">
-        <button class="sendButton">
-            <span class="material-icons">
-                sentiment_satisfied_alt
+        <div class="dropup">
+            <button class="sendButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-icons">
+                    sentiment_satisfied_alt
                 </span>
-        </button>
+            </button>
+            <ul class="dropdown-menu">
+                <li>hello</li>
+                <li>hello</li>
+                <li>hello</li>
+                <li>hello</li>
+            </ul>
+        </div>
         <button class="sendButton">
             <span class="material-icons">
                 send
