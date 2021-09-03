@@ -1,4 +1,4 @@
- var socket = io();
+var socket = io();
 var form = document.getElementById('form');
 var input = document.getElementById('input');
 var nick = document.querySelector(".nickBox");
@@ -51,7 +51,6 @@ form.addEventListener('submit', function (event) {
         }
     }
     document.querySelector(".nickBox").setAttribute("disabled", "disabled");
-    console.log(nick.value);
 });
 
 //listening for incoming messages
@@ -98,4 +97,9 @@ socket.on("users", function (data) {
     var oldUsersValue = item[0].childNodes[0];
     let latestUsersValue = data.users;
     oldUsersValue.nodeValue = latestUsersValue;
-  });
+});
+
+$(".emoji").click(function(event){
+    event.preventDefault();
+    input.value = input.value + " " + $(this).text();
+})
