@@ -17,57 +17,62 @@
 
 <body>
     <!-- message, receivedMessage, sentMessage, botMessage -->
-    <div class="messageContainer container">
+    <div class="container messageContainer">
         <p style="color: white;">Active users:<span id="activeUsers" class="activeUsers">0</span></p>
     </div>
     <form id="form" action="">
         <input class="nickBox" placeholder="Nickname">
+        
+            
+            
         <input id="input" autocomplete="off" class="messageBox" placeholder="Type a message...">
-        <div class="dropup">
-            <button class="sendButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="material-icons">
-                    sentiment_satisfied_alt
-                </span>
-            </button>
-            <div class="dropdown-menu p-2 container">
-                <div class="row row-cols-5 p-2">
-                    <button class="col p-1 emoji">😀</button>
-                    <button class="col p-1 emoji">😁</button>
-                    <button class="col p-1 emoji">😂</button>
-                    <button class="col p-1 emoji">🤣</button>
-                    <button class="col p-1 emoji">😃</button>
-                    <button class="col p-1 emoji">😄</button>
-                    <button class="col p-1 emoji">😅</button>
-                    <button class="col p-1 emoji">😆</button>
-                    <button class="col p-1 emoji">😉</button>
-                    <button class="col p-1 emoji">😊</button>
-                    <button class="col p-1 emoji">😋</button>
-                    <button class="col p-1 emoji">😎</button>
-                    <button class="col p-1 emoji">😍</button>
-                    <button class="col p-1 emoji">😘</button>
-                    <button class="col p-1 emoji">🥰</button>
-                    <button class="col p-1 emoji">🙂</button>
-                    <button class="col p-1 emoji">🤗</button>
-                    <button class="col p-1 emoji">🤩</button>
-                    <button class="col p-1 emoji">🤔</button>
-                    <button class="col p-1 emoji">🤨</button>
-                    <button class="col p-1 emoji">😐</button>
-                    <button class="col p-1 emoji">😑</button>
-                    <button class="col p-1 emoji">😶</button>
-                    <button class="col p-1 emoji">🙄</button>
-                    <button class="col p-1 emoji">😏</button>
-                    <button class="col p-1 emoji">😣</button>
-                    <button class="col p-1 emoji">😥</button>
-                    <button class="col p-1 emoji">😮</button>
-                    <button class="col p-1 emoji">😯</button>
-                </div>
-            </div>
-        </div>
         <button class="sendButton">
             <span class="material-icons">
                 send
             </span>
         </button>
+    <div class="dropup">
+        <button class="sendButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="material-icons">
+                sentiment_satisfied_alt
+            </span>
+        </button>
+        <div class="container p-2 dropdown-menu">
+            <div class="p-2 row row-cols-5">
+                <button class="p-1 col emoji">😀</button>
+                <button class="p-1 col emoji">😁</button>
+                <button class="p-1 col emoji">😂</button>
+                <button class="p-1 col emoji">🤣</button>
+                <button class="p-1 col emoji">😃</button>
+                <button class="p-1 col emoji">😄</button>
+                <button class="p-1 col emoji">😅</button>
+                <button class="p-1 col emoji">😆</button>
+                <button class="p-1 col emoji">😉</button>
+                <button class="p-1 col emoji">😊</button>
+                <button class="p-1 col emoji">😋</button>
+                <button class="p-1 col emoji">😎</button>
+                <button class="p-1 col emoji">😍</button>
+                <button class="p-1 col emoji">😘</button>
+                <button class="p-1 col emoji">🥰</button>
+                <button class="p-1 col emoji">🙂</button>
+                <button class="p-1 col emoji">🤗</button>
+                <button class="p-1 col emoji">🤩</button>
+                <button class="p-1 col emoji">🤔</button>
+                <button class="p-1 col emoji">🤨</button>
+                <button class="p-1 col emoji">😐</button>
+                <button class="p-1 col emoji">😑</button>
+                <button class="p-1 col emoji">😶</button>
+                <button class="p-1 col emoji">🙄</button>
+                <button class="p-1 col emoji">😏</button>
+                <button class="p-1 col emoji">😣</button>
+                <button class="p-1 col emoji">😥</button>
+                <button class="p-1 col emoji">😮</button>
+                <button class="p-1 col emoji">😯</button>
+            </div>
+        </div>
+    </div>
+         
+       
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
