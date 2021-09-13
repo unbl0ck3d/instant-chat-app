@@ -14,14 +14,14 @@ app.get('/', (req, res) => {
 });
 io.on("connection", function(socket) {
   users += 1; //increment the variable whenever a new user connects
-  console.log("A new user connected");
+  console.log("ayo bro whos the new guy");
   //
   //emits the number of active users at the given moment
   io.sockets.emit("users", { users: users });
   // emit welcome message to single user when connected
-  socket.emit( "botMessage",  "Welcome to Chatbud! You are now connected to the group chat :D" );
+  socket.emit( "botMessage",  "welcome to a terrible chatroom" );
   // emit to everyone except the client thats connected
-  socket.broadcast.emit("botMessage", "A new user connected. Say Hi!");
+  socket.broadcast.emit("botMessage", "ayo bro who's the new guy");
   // emitting to all the clients
   // io.emit("welcomeMessage", "nise")
   // catching a received message from client
