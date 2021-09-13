@@ -40,7 +40,7 @@ io.on("connection", function(socket) {
     users = users - 1; //decrement the counter whenever a user disconnects
     io.sockets.emit("users", { users: users }); //emits the number of active users at the given moment
     console.log("A user disconnected");
-    socket.broadcast.emit("botMessage", "A user disconnected from the chat");
+    socket.broadcast.emit("botMessage", "some loser couldnt take the heat");
   });
 })
 server.listen(process.env.PORT || 3000, () => {
